@@ -4,6 +4,10 @@ from h2o.estimators.random_forest import H2ORandomForestEstimator
 import mlflow
 import mlflow.h2o
 
+mlflow.set_tracking_uri("http://127.0.0.1:8080")
+
+mlflow.set_experiment("Wine Quality")
+
 h2o.init()
 
 wine = h2o.import_file(path="wine-quality.csv")
